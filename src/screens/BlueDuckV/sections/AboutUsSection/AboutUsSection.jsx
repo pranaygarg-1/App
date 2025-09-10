@@ -53,7 +53,7 @@ export const AboutUsSection = () => {
       </header>
 
       {/* Hero Content */}
-      <main className="w-full max-w-[1018px] mx-auto mt-32 px-4">
+      <main className="w-full max-w-[1018px] mx-auto mt-28 px-4">
         <div className="relative w-full">
 
           {/* Hero Text Section */}
@@ -64,7 +64,7 @@ export const AboutUsSection = () => {
               <h1 className="text-center leading-[normal] tracking-[0]">
                 <span className="text-[70px]  block [font-family:'Helvetica-Regular',Helvetica] font-normal text-white">
                   TIRED{" "}
-                  <span className="[font-family:'Helvetica-Light',Helvetica] font-light text-[70px]">
+                  <span className="font-thin italic text-white text-[70px] leading-[1.1]">
                     of
                   </span>{" "}
                   AGENCIES{" "}
@@ -72,7 +72,7 @@ export const AboutUsSection = () => {
 
                 <div className="flex items-center gap-6">
                   {/* Video Placeholder */}
-                  <div className="w-[170px] h-[100px] bg-[#c4c4c4] flex items-center justify-center shrink-0">
+                  <div className="w-[190px] h-[100px] bg-[#c4c4c4] flex items-center justify-center shrink-0">
                     <span className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-xs text-center leading-snug">
                       Placeholder for video which <br />
                       will expand in second section
@@ -80,7 +80,7 @@ export const AboutUsSection = () => {
                   </div>
 
                   {/* Heading Text */}
-                  <span className="[font-family:'Helvetica-Light',Helvetica] font-light text-white text-[70px] leading-[1.1]">
+                  <span className="font-extralight text-white text-[70px] leading-[1.1]">
                     THAT JUST{" "}
                     <span className="[font-family:'Helvetica-Regular',Helvetica] font-normal text-[70px]">
                       DESIGN
@@ -92,25 +92,26 @@ export const AboutUsSection = () => {
 
 
 
-                <span className="mt-[10px] [font-family:'Helvetica-Light',Helvetica] font-light text-white text-[60px] leading-[1.1]">
+                <span className="mt-[10px] font-thin text-white text-[75px] leading-[1.1]">
                   TOOLS THAT JUST{" "}
-                  <span className="[font-family:'Helvetica-Regular',Helvetica] font-normal text-[60px]">
+                  <span className="font-normal text-[70px]">
                     AUTOMATE?
                   </span>
                 </span>
+
 
               </h1>
 
             </div>
 
             {/* Subtitle */}
-            <p className="mt-[31px] text-center [font-family:'Helvetica_Neue-Light',Helvetica] font-light text-[#cacaca] text-xl tracking-[0] leading-[26px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+            <p className="mt-[50px] text-center [font-family:'Helvetica_Neue-Light',Helvetica] font-extralight text-[#cacaca] text-xl tracking-[0] leading-[26px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
               We build brands and growth strategies that actually work faster,
               smarter, and built to last.
             </p>
 
             {/* CTA Section */}
-            <div className="flex items-center justify-center gap-1 mt-[90px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+            <div className="flex items-center justify-center gap-1 mt-[60px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
               <Button className="h-10 px-5 py-[9px] bg-[#1929f2] hover:bg-[#1520d4] transition-colors">
                 <span className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-xl tracking-[0] leading-[normal] whitespace-nowrap">
                   Try Our AI-Powered Brand Engine
