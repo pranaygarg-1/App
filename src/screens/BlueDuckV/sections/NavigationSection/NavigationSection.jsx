@@ -39,7 +39,7 @@ export const NavigationSection = () => {
   ];
 
   return (
-    <section className="w-full max-w-[1240px] mx-auto  relative mb-80">
+    <section className="w-full max-w-[1240px] mx-auto  relative">
 
       <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
 
