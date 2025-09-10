@@ -43,7 +43,7 @@ export const BlueDuckV = () => {
     {
       src: "https://c.animaapp.com/mf9h3e3wUYtRXO/img/xpay-preto-1.png",
       alt: "Xpay preto",
-      className: "w-[70px] h-7 object-cover",
+      className: "w-[70px] h-7 object-cover bg-white",
     },
   ];
 
@@ -57,13 +57,13 @@ export const BlueDuckV = () => {
           <AboutUsSection />
         </section>
 
-        <section className="w-full h-[758px] bg-[#c4c4c4] flex items-center justify-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+        <section className="w-full h-[758px] bg-[#c4c4c4] flex items-center justify-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] mb-12">
           <div className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-[17px] text-center tracking-[0] leading-[normal]">
             Placeholder for a video that will expand with animation
           </div>
         </section>
 
-        <section className="w-full flex justify-center py-8 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+        <section className="w-full flex justify-center py-8 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] mb-24">
           <div className="flex items-center gap-[69px] opacity-80">
             {logoData.map((logo, index) => (
               <img
