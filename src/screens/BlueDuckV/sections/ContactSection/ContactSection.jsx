@@ -30,10 +30,12 @@ export const ContactSection = () => {
   ];
 
   return (
-    <section className="w-full max-w-[1242px] mx-auto px-4 py-16 relative">
+    <section className="w-full max-w-[1242px] mx-auto px-4 py-16 relative mb-28">
+
       <div className="w-full">
+
         <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-          <div className="text-center mb-[60px]">
+          <div className="text-center mb-[30px]">
             <div className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal] whitespace-nowrap">
               WHO WE ARE
             </div>
@@ -42,9 +44,9 @@ export const ContactSection = () => {
 
         <div className="w-full">
           <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-            <div className="text-center mb-[136px] px-20">
-              <h2 className="[font-family:'Helvetica_Neue-Thin',Helvetica] font-normal text-white text-[68px] tracking-[0] leading-[normal]">
-                <span className="[font-family:'Helvetica_Neue-ThinItalic',Helvetica] font-thin italic">
+            <div className="text-center mb-[27px] px-10">
+              <h2 className="font-normal text-white text-[68px] tracking-[0] leading-[normal]">
+                <span className="font-thin italic">
                   Not Your
                 </span>
                 <span className="[font-family:'Helvetica_Neue-Regular',Helvetica]">
@@ -58,7 +60,7 @@ export const ContactSection = () => {
                   {" "}
                   <br />
                 </span>
-                <span className="[font-family:'Helvetica_Neue-ThinItalic',Helvetica] font-thin italic">
+                <span className="font-thin italic">
                   Not Your
                 </span>
                 <span className="[font-family:'Helvetica_Neue-Regular',Helvetica]">
@@ -71,24 +73,29 @@ export const ContactSection = () => {
 
           <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
             <div className="flex justify-center mb-[76px]">
-              <div className="w-[718px] h-[33px] relative">
-                <div className="relative w-[716px] h-[33px]">
-                  <div className="absolute w-[308px] h-[31px] top-0.5 left-[248px] bg-[#1929f2] rounded" />
-                  <div className="absolute top-0 left-0 [font-family:'Helvetica_Neue-Light',Helvetica] font-light text-white text-2xl text-right tracking-[0] leading-[31.2px] whitespace-nowrap">
-                    At Blue Duck, we blend&nbsp;&nbsp;Storytelling, Strategy,
-                    and AI&nbsp;&nbsp;to help brands:
-                  </div>
+              <div className="relative w-[718px] h-[33px]">
+                {/* Highlight background */}
+                <div className="absolute top-[2px] left-[248px] w-[308px] h-[31px] bg-[#1929f2] rounded" />
+
+                {/* Text layer */}
+                <div style={{ wordSpacing: '0.1em' }} className="absolute top-0 left-0 font-light text-white text-2xl text-right leading-[31.2px] whitespace-nowrap tracking-normal">
+                  At Blue Duck, we blend&nbsp;&nbsp;
+                  <span className="relative z-10">Storytelling, Strategy, and AI</span>
+                  &nbsp;&nbsp;to help brands:
                 </div>
               </div>
             </div>
           </div>
 
+
           <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-[108px]">
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-[120px]">
+
               {featureCards.map((card, index) => (
                 <Card
                   key={index}
-                  className="w-full max-w-[400px] h-[218px] bg-transparent border-none"
+                  className="w-full max-w-[400px] h-[200px] bg-transparent border-none"
                 >
                   <CardContent className="p-0 relative h-full">
                     <img
@@ -113,23 +120,33 @@ export const ContactSection = () => {
       </div>
 
       <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:800ms]">
-        <div className="text-center px-[162px]">
-          <div className="[font-family:'Helvetica_Neue-Thin',Helvetica] font-normal text-transparent text-4xl tracking-[0] leading-[46.8px]">
-            <span className="[font-family:'Helvetica_Neue-ThinItalic',Helvetica] font-thin italic text-[#ffffff99]">
+
+        <div className="text-center px-[62px]">
+
+          <div className="text-transparent text-4xl tracking-[0] leading-[45px]">
+
+            <span className="font-thin italic text-[#ffffff99]">
               We Work With
             </span>
+
             <span className="font-thin text-[#ffffff99]">&nbsp;</span>
+
             <span className="[font-family:'Helvetica_Neue-Regular',Helvetica] text-[#ffffff99]">
-              Founders And Teams Who Want Creativity <br />
-              with Roi And Strategy
+              Founders And Teams Who Want Creativity 
+              <br />
+              With ROI And Strategy
             </span>
+
             <span className="font-thin text-[#ffffff99]">&nbsp;</span>
-            <span className="[font-family:'Helvetica_Neue-ThinItalic',Helvetica] font-thin italic text-[#ffffff99]">
+
+            <span className="font-thin italic text-[#ffffff99]">
               Without The Jargon.
             </span>
+
           </div>
         </div>
       </div>
+
     </section>
   );
 };
