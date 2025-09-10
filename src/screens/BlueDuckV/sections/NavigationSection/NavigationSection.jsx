@@ -39,34 +39,42 @@ export const NavigationSection = () => {
   ];
 
   return (
-    <section className="w-full max-w-[1240px] mx-auto px-4 relative">
+    <section className="w-full max-w-[1240px] mx-auto  relative mb-80">
+
       <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-        <div className="text-center mb-[72px]">
+
+        <div className="text-center mb-[50px]">
           <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
             WHAT WE DO
           </h2>
         </div>
 
-        <div className="space-y-[72px]">
+        <div className="space-y-[120px]"> {/* increase spacing here as needed */}
+
+          {/* Marketing Services */}
           <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-            <div className="grid lg:grid-cols-2 gap-8 items-start">
+            <div className="grid lg:grid-cols-2 gap-80 items-start">
+
+              {/* Left - Image + Title */}
               <div className="order-2 lg:order-1">
-                <div className="relative">
-                  <div className="absolute w-[528px] h-[489px] bg-[url(https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151.png)] bg-cover bg-[50%_50%]">
+                <div className="relative w-[528px] h-[489px] ml-60"> {/* FIXED HEIGHT container */}
+                  <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151.png)] bg-cover bg-[50%_50%]">
                     <img
                       className="w-[528px] h-[489px]"
                       alt="Rectangle"
                       src="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1129.png"
                     />
                   </div>
-                  <div className="absolute top-10 left-0 w-[326px]">
-                    <h3 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-[68px] tracking-[0] leading-[normal]">
+                  <div className="absolute top-10 -left-60 w-[326px]">
+                    <h3 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-[68px] leading-[normal]">
                       Marketing Services
                     </h3>
                   </div>
+
                 </div>
               </div>
 
+              {/* Right - Services */}
               <div className="order-1 lg:order-2 lg:pl-8">
                 <div className="flex flex-col gap-12 pt-[21px]">
                   {marketingServices.map((service, index) => (
@@ -76,11 +84,11 @@ export const NavigationSection = () => {
                       style={{ "--animation-delay": `${400 + index * 200}ms` }}
                     >
                       <CardContent className="p-0">
-                        <div className="space-y-[41px]">
-                          <h4 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-2xl tracking-[0] leading-[normal]">
-                            {service.title}
+                        <div className="space-y-3">
+                          <h4 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-2xl leading-[normal]">
+                            {index + 1}. {service.title}
                           </h4>
-                          <p className="pl-[35px] [font-family:'Helvetica_Neue-Light',Helvetica] font-light text-[#ffffffc2] text-[17px] tracking-[0] leading-[normal]">
+                          <p className="pl-[25px] font-light text-[#ffffffc2] text-[17px] leading-[normal]">
                             {service.description}
                           </p>
                         </div>
@@ -92,25 +100,29 @@ export const NavigationSection = () => {
             </div>
           </div>
 
-          <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1000ms] opacity-20">
-            <div className="grid lg:grid-cols-2 gap-8 items-start">
+          {/* Consulting Services */}
+          <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1000ms]">
+            <div className="grid lg:grid-cols-2 gap-80 items-start">
+
+              {/* Left - Image + Title */}
               <div className="order-2 lg:order-1">
-                <div className="relative">
-                  <div className="absolute w-[528px] h-[489px] bg-[url(https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151-1.png)] bg-cover bg-[50%_50%]">
+                <div className="relative w-[528px] h-[489px] ml-60"> {/* FIXED HEIGHT container */}
+                  <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151-1.png)] bg-cover bg-[50%_50%]">
                     <img
                       className="w-[528px] h-[489px]"
                       alt="Rectangle"
                       src="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1129-1.png"
                     />
                   </div>
-                  <div className="absolute top-10 left-0 w-[343px]">
-                    <h3 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-[68px] tracking-[0] leading-[normal]">
+                  <div className="absolute top-10 -left-60 w-[343px]">
+                    <h3 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-[68px] leading-[normal]">
                       Consulting Services
                     </h3>
                   </div>
                 </div>
               </div>
 
+              {/* Right - Services */}
               <div className="order-1 lg:order-2 lg:pl-8">
                 <div className="flex flex-col gap-12 pt-[21px]">
                   {consultingServices.map((service, index) => (
@@ -120,11 +132,11 @@ export const NavigationSection = () => {
                       style={{ "--animation-delay": `${1200 + index * 200}ms` }}
                     >
                       <CardContent className="p-0">
-                        <div className="space-y-[41px]">
-                          <h4 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-2xl tracking-[0] leading-[normal]">
-                            {service.title}
+                        <div className="space-y-3">
+                          <h4 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-2xl leading-[normal]">
+                            {index + 1}. {service.title}
                           </h4>
-                          <p className="pl-[35px] [font-family:'Helvetica_Neue-Light',Helvetica] font-light text-white text-[17px] tracking-[0] leading-[normal]">
+                          <p className="pl-[25px] font-light text-[#ffffffc2] text-[17px] leading-[normal]">
                             {service.description}
                           </p>
                         </div>
@@ -136,6 +148,7 @@ export const NavigationSection = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
