@@ -34,49 +34,53 @@ export const HeroSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-20">
+    <section className="w-full bg-white py-16 md:py-20">
       <div className="max-w-[1274px] mx-auto px-4 relative">
-        <div className="relative">
-          <h2 className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms] text-center mb-16 [font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-xl tracking-[0] leading-[normal]">
-            WHY CHOOSE BLUE DUCK
-          </h2>
-
-          <div className="flex justify-between items-start gap-8 relative">
-            {/* Vertical divider lines */}
-            <div className="absolute inset-0 flex justify-between pointer-events-none">
-              <div className="w-px h-full bg-black" />
-              <div className="w-px h-full bg-black" />
-              <div className="w-px h-full bg-black" />
-              <div className="w-px h-full bg-black" />
-            </div>
-
-            {featureCards.map((card, index) => (
-              <Card
-                key={index}
-                className={`translate-y-[-1rem] animate-fade-up opacity-0 [--animation-delay:${200 + index * 200}ms] flex-1 max-w-[298px] h-[271px] bg-[#040404] border border-solid border-[#ffffff12] backdrop-blur-[20.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(20.5px)_brightness(100%)] hover:scale-105 transition-transform duration-300`}
-              >
-                <CardContent className="relative h-full p-0 flex flex-col">
-                  <div className="flex justify-center pt-6">
-                    <img
-                      className={card.imageClasses}
-                      alt="Element rendered abstract"
-                      src={card.image}
-                    />
+        {/* Vertical dividers behind heading and cards */}
+        <div className="absolute top-0 left-0 w-full h-full hidden sm:block pointer-events-none z-0">
+          <div className="flex h-full w-full">
+            {[1,2,3,4,5].map((_,i) => (
+              // Only render between the cards (4 dividers for 4 cards = 5 columns)
+              i!==0 && i!==5 &&
+                <div
+                  key={i}
+                  className="flex-1 relative"
+                >
+                  <div className="absolute inset-0 flex justify-center">
+                    <div className="w-px h-full bg-black" />
                   </div>
-
-                  <div className="flex-1 flex flex-col justify-end p-7">
-                    <h3 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-2xl text-center tracking-[0] leading-[normal] mb-4">
-                      {card.title}
-                    </h3>
-
-                    <p className="[font-family:'Helvetica_Neue-Light',Helvetica] font-light text-[#ffffffc2] text-base text-center tracking-[0] leading-[normal]">
-                      {card.description}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
             ))}
           </div>
+        </div>
+
+        {/* Heading */}
+        <h2 className="relative z-10 text-center mb-16 [font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-xl md:text-2xl tracking-[0] leading-[normal]">
+          WHY CHOOSE BLUE DUCK
+        </h2>
+
+        {/* Cards */}
+        <div className="relative flex flex-col sm:flex-row items-stretch justify-between gap-8 z-10">
+          {featureCards.map((card, index) => (
+            <Card
+              key={index}
+              className="flex-1 max-w-full sm:max-w-[300px] h-[280px] bg-[#040404] border border-[#ffffff1a] hover:scale-105 transition-transform duration-300 rounded-[18px] shadow-lg flex flex-col"
+            >
+              <CardContent className="relative h-full flex flex-col items-center justify-center p-6 text-center">
+                <img
+                  className={card.imageClasses + " mb-6"}
+                  alt="Element rendered abstract"
+                  src={card.image}
+                />
+                <h3 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-xl md:text-2xl leading-snug mb-3">
+                  {card.title}
+                </h3>
+                <p className="[font-family:'Helvetica_Neue-Light',Helvetica] font-light text-[#ffffffc2] text-sm md:text-base leading-normal">
+                  {card.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
