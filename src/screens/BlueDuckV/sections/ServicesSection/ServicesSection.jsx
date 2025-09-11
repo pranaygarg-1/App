@@ -127,8 +127,8 @@ export const ServicesSection = () => {
     <section className="w-full flex flex-col items-center gap-40 py-20">
       {/* Testimonials Section */}
       <div className="w-full max-w-7xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-        <div className="text-center mb-18">
-          <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
+        <div className="text-center mb-12">
+          <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-light text-[#787878] text-lg tracking-[0] leading-[normal]">
             WHAT OTHERS SAY
           </h2>
         </div>
