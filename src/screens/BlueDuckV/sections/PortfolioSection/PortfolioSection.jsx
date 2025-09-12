@@ -66,14 +66,17 @@ export const PortfolioSection = () => {
 
   return (
     <section className="w-full py-16 px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-      <div className="max-w-[1240px] mx-auto">
+
+      <div className="max-w-[1240px] mx-auto mb-5">
+
         <header className="text-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
           <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
             EXPLORE OUR WORK
           </h2>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          
           {portfolioItems.map((item, index) => (
             <Card
               key={item.id}
@@ -81,6 +84,7 @@ export const PortfolioSection = () => {
               style={{ "--animation-delay": `${600 + index * 100}ms` }}
             >
               <CardContent className="p-0 relative">
+                
                 <div className="relative overflow-hidden rounded-lg">
                   <img
                     className="w-full h-[360px] object-cover transition-transform duration-300 group-hover:scale-105"
@@ -125,9 +129,66 @@ export const PortfolioSection = () => {
               </CardContent>
             </Card>
           ))}
+        </div> */}
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 mb-16 items-start">
+          {portfolioItems.map((item, index) => (
+            <Card
+              key={item.id}
+              className={`group relative bg-transparent border-none shadow-none hover:scale-[1.02] transition-transform duration-300 translate-y-[-1rem] animate-fade-in opacity-0
+        ${index % 2 !== 0 ? "lg:mt-16" : ""} // push right side cards lower
+      `}
+              style={{ "--animation-delay": `${600 + index * 100}ms` }}
+            >
+              <CardContent className="p-0 relative">
+                <div className="relative overflow-hidden">
+                  <img
+                    className="w-full h-[360px] object-cover transition-transform duration-300 group-hover:scale-105"
+                    alt="Portfolio project"
+                    src={item.image}
+                  />
+
+                  <div className="absolute top-80 left-4">
+                    <Badge
+                      variant="secondary"
+                      className="inline-flex items-center justify-center gap-1 pl-[7px] pr-3 py-1.5 bg-black rounded-[90px] border border-solid border-[#1e1e1e] text-white text-xs font-normal"
+                    >
+                      <img
+                        className="w-[18px] h-[18px]"
+                        alt={`${item.country} flag`}
+                        src={item.countryFlag}
+                      />
+                      {item.country}
+                    </Badge>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between mt-4 px-3">
+                  <img
+                    className="h-[30px] w-auto object-contain"
+                    alt={item.logoAlt}
+                    src={item.logo}
+                  />
+
+                  <div className="flex items-center gap-3">
+                    {item.tags.map((tag, tagIndex) => (
+                      <Badge
+                        key={tagIndex}
+                        variant="secondary"
+                        className="inline-flex items-center justify-center gap-2.5 px-4 py-1.5 bg-[#2a2626] rounded-[90px] border border-solid border-[#343434] text-white text-xs font-thin"
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
-        <div className="flex justify-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1200ms]">
+
+        <div className="flex justify-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1200ms] pt-10">
           <div className="inline-flex items-center gap-1">
             <Button className="h-auto inline-flex flex-col items-start gap-2.5 px-5 py-[9px] bg-[#1929f2] hover:bg-[#1929f2]/90 transition-colors duration-300">
               <div className="flex items-center gap-3 w-full">

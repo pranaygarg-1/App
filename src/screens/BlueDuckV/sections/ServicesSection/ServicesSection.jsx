@@ -124,16 +124,16 @@ export const ServicesSection = () => {
   ];
 
   return (
-    <section className="w-full flex flex-col items-center gap-40 py-20">
+    <section className="w-full flex flex-col items-center gap-40 py-20 mb-12">
       {/* Testimonials Section */}
       <div className="w-full max-w-7xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-        <div className="text-center mb-18">
-          <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
+        <div className="text-center mb-12">
+          <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-light text-[#787878] text-lg tracking-[0] leading-[normal]">
             WHAT OTHERS SAY
           </h2>
         </div>
 
-        <div className="flex gap-7 overflow-x-auto pb-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+        <div className="flex gap-7 overflow-x-auto scrollbar-hide pb-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
           {testimonials.map((testimonial, index) => (
             <Card
               key={testimonial.id}
@@ -189,40 +189,48 @@ export const ServicesSection = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="w-full max-w-4xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-        <div className="text-center mb-24">
-          <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
-            FREQUENTLY ASKED QUESTIONS
-          </h2>
+      <div className= "flex justify-start p-0 m-0">
+        
+        <div className="w-full max-w-4xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] mt ">
+          <div className="text-center mb-20">
+            <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
+              FREQUENTLY ASKED QUESTIONS
+            </h2>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-8">
+            {faqItems.map((item, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border-none"
+              >
+                <div className="relative">
+                  <AccordionTrigger className="flex justify-between items-center w-full py-0 hover:no-underline [&[data-state=open]>svg]:rotate-180">
+                    <div className="text-left pl-[17px] [-webkit-text-stroke:1px_#00000038] font-light text-white text-2xl tracking-[0.50px] leading-7 mb-3">
+                      {item.question}
+                    </div>
+                    <ChevronDownIcon className="h-5 w-5 text-white transition-transform duration-200 mr-[38px]" />
+                  </AccordionTrigger>
+                  <div className="absolute w-full h-px bg-[url(https://c.animaapp.com/mf9h3e3wUYtRXO/img/line-11.svg)] bg-repeat-x bottom-0" />
+                </div>
+                <AccordionContent className="pt-4 pb-0">
+                  <div className="pl-[17px] text-white">{item.answer}</div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-8">
-          {faqItems.map((item, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="border-none"
-            >
-              <div className="relative">
-                <AccordionTrigger className="flex justify-between items-center w-full py-0 hover:no-underline [&[data-state=open]>svg]:rotate-180">
-                  <div className="text-left pl-[17px] [-webkit-text-stroke:1px_#00000038] [font-family:'Helvetica_Neue-Light',Helvetica] font-light text-white text-xl tracking-[0.50px] leading-7">
-                    {item.question}
-                  </div>
-                  <ChevronDownIcon className="h-5 w-5 text-white transition-transform duration-200 mr-[38px]" />
-                </AccordionTrigger>
-                <div className="absolute w-full h-px bg-[url(https://c.animaapp.com/mf9h3e3wUYtRXO/img/line-11.svg)] bg-repeat-x bottom-0" />
-              </div>
-              <AccordionContent className="pt-4 pb-0">
-                <div className="pl-[17px] text-white">{item.answer}</div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div>
+
+        </div>
       </div>
+
 
       {/* Blog Section */}
       <div className="w-full max-w-7xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
-        <div className="text-center mb-21">
+        <div className="text-center mb-16 ">
           <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
             BLOGS
           </h2>
@@ -245,11 +253,11 @@ export const ServicesSection = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <div className="[font-family:'Helvetica_Neue-Light',Helvetica] font-light text-[#ffffffab] text-base tracking-[0] leading-[20.8px]">
+                  <div className=" font-normal text-[#ffffffab] text-base tracking-[0] leading-[20.8px]">
                     {post.category}
                   </div>
 
-                  <h3 className="[font-family:'Helvetica_Neue-Light',Helvetica] font-light text-white text-xl tracking-[0] leading-[26px]">
+                  <h3 className="font-normal text-white text-base tracking-[0] leading-[26px]">
                     {post.title}
                   </h3>
                 </div>

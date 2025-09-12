@@ -196,3 +196,19 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+/* Hide scrollbar but keep scroll */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+html, body {
+  width: 100vw;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  margin-left: 7px;
+}

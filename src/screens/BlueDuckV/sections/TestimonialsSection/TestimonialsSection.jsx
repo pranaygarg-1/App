@@ -19,12 +19,15 @@ export const TestimonialsSection = () => {
   ];
 
   return (
-    <footer className="w-full bg-[#090909] py-[125px] px-[60px] translate-y-[-1rem] animate-fade-in opacity-0">
+    <footer className="w-full bg-[#090909] py-[125px] px-[60px] translate-y-[-1rem] animate-fade-in opacity-0 pb-28">
+
       <div className="max-w-[1308px] mx-auto">
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0">
+
           {/* Newsletter Subscription Section */}
           <div className="lg:col-span-1 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-            <div className="space-y-[34px]">
+            <div className="space-y-[12px]">
               <h3 className="[font-family:'Helvetica_Neue-Medium',Helvetica] font-medium text-white text-base leading-[19.2px]">
                 Subscribe to Updates
               </h3>
@@ -47,7 +50,7 @@ export const TestimonialsSection = () => {
               </div>
             </div>
 
-            <div className="mt-[91px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+            <div className="mt-[52px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
               <img
                 className="w-60 h-[50px]"
                 alt="Company Logo"
@@ -57,14 +60,14 @@ export const TestimonialsSection = () => {
           </div>
 
           {/* Navigation Sections */}
-          <div className="lg:col-span-2 flex justify-end gap-[182px]">
+          <div className="lg:col-span-2 flex justify-end gap-[90px]">
             {/* Company Section */}
             <nav className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
-              <h4 className="[font-family:'Darker_Grotesque',Helvetica] font-semibold text-[#1929f2] text-[22px] leading-[21.6px] mb-8">
+              <h4 className="[font-family:'Darker_Grotesque',Helvetica] font-semibold text-[#1929f2] text-[22px] leading-[21.6px] mb-3">
                 Company
               </h4>
 
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
                     <a
@@ -80,7 +83,7 @@ export const TestimonialsSection = () => {
 
             {/* Support Section */}
             <nav className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:800ms]">
-              <h4 className="[font-family:'Darker_Grotesque',Helvetica] font-semibold text-[#1929f2] text-[22px] leading-[21.6px] mb-8">
+              <h4 className="[font-family:'Darker_Grotesque',Helvetica] font-semibold text-[#1929f2] text-[22px] leading-[21.6px] mb-3">
                 Support
               </h4>
 
