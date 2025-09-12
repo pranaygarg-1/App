@@ -36,26 +36,21 @@ export const HeroSection = () => {
   return (
     <section className="w-full bg-white py-16 md:py-20">
       <div className="max-w-[1274px] mx-auto px-4 relative">
-        {/* Vertical dividers behind heading and cards */}
+        {/* Vertical dividers (behind heading & cards, desktop only) */}
         <div className="absolute top-0 left-0 w-full h-full hidden sm:block pointer-events-none z-0">
           <div className="flex h-full w-full">
-            {[1,2,3,4,5].map((_,i) => (
-              // Only render between the cards (4 dividers for 4 cards = 5 columns)
-              i!==0 && i!==5 &&
-                <div
-                  key={i}
-                  className="flex-1 relative"
-                >
-                  <div className="absolute inset-0 flex justify-center">
-                    <div className="w-px h-full bg-black" />
-                  </div>
+            {Array.from({ length: featureCards.length - 1 }).map((_, i) => (
+              <div key={i} className="flex-1 relative">
+                <div className="absolute inset-0 flex justify-center">
+                  <div className="w-px h-full bg-black/20" />
                 </div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Heading */}
-        <h2 className="relative z-10 text-center mb-16 [font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-xl md:text-2xl tracking-[0] leading-[normal]">
+        <h2 className="relative z-10 text-center mb-12 sm:mb-16 font-normal text-black text-xl md:text-2xl">
           WHY CHOOSE BLUE DUCK
         </h2>
 
@@ -68,14 +63,14 @@ export const HeroSection = () => {
             >
               <CardContent className="relative h-full flex flex-col items-center justify-center p-6 text-center">
                 <img
-                  className={card.imageClasses + " mb-6"}
-                  alt="Element rendered abstract"
+                  className={`${card.imageClasses} mb-6`}
+                  alt={card.title}
                   src={card.image}
                 />
-                <h3 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-white text-xl md:text-2xl leading-snug mb-3">
+                <h3 className="font-normal text-white text-lg sm:text-xl md:text-2xl leading-snug mb-3">
                   {card.title}
                 </h3>
-                <p className="[font-family:'Helvetica_Neue-Light',Helvetica] font-light text-[#ffffffc2] text-sm md:text-base leading-normal">
+                <p className="font-light text-[#ffffffc2] text-sm md:text-base leading-normal">
                   {card.description}
                 </p>
               </CardContent>
