@@ -1,9 +1,10 @@
 import React from "react";
-import { AboutUsSection } from "./sections/AboutUsSection/AboutUsSection";
+import { Navbar } from "../../components/ui/Navbar";
+import { AboutUsSection } from "./sections/Hero/HeroSection";
 import { CallToActionSection } from "./sections/CallToActionSection/CallToActionSection";
-import { ContactSection } from "./sections/ContactSection/ContactSection";
+import { ContactSection } from "./sections/About/About";
 import { HeroSection } from "./sections/HeroSection/HeroSection";
-import { NavigationSection } from "./sections/NavigationSection/NavigationSection";
+import { NavigationSection } from "./sections/Services/Services";
 import { PortfolioSection } from "./sections/PortfolioSection/PortfolioSection";
 import { ServicesSection } from "./sections/ServicesSection/ServicesSection";
 import { TestimonialsSection } from "./sections/TestimonialsSection/TestimonialsSection";
@@ -45,6 +46,9 @@ export const BlueDuckV = () => {
       className="bg-black flex flex-col items-center w-screen min-h-screen overflow-x-hidden"
       data-model-id="3816:7750"
     >
+      {/* ✅ Navbar on top */}
+      <Navbar />
+
       <div className="bg-black overflow-hidden w-full max-w-[1440px] flex flex-col">
         <section className="w-full translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
           <AboutUsSection />
