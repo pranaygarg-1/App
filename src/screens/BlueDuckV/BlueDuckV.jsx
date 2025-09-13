@@ -13,37 +13,30 @@ export const BlueDuckV = () => {
     {
       src: "https://c.animaapp.com/mf9h3e3wUYtRXO/img/deepseek-text-1.png",
       alt: "Deepseek text",
-      className: "w-[151px] h-7 object-cover",
     },
     {
       src: "https://c.animaapp.com/mf9h3e3wUYtRXO/img/coca-cola-logo-white-1.png",
       alt: "Coca cola logo white",
-      className: "w-[87px] h-7 object-cover",
     },
     {
       src: "https://c.animaapp.com/mf9h3e3wUYtRXO/img/adobe-express---file--7--1.png",
       alt: "Adobe express file",
-      className: "w-[65px] h-[46px]",
     },
     {
       src: "https://c.animaapp.com/mf9h3e3wUYtRXO/img/avidxchange-primarylogo-rgbh-1.png",
       alt: "Avidxchange",
-      className: "w-[164px] h-7",
     },
     {
       src: "https://c.animaapp.com/mf9h3e3wUYtRXO/img/adobe-express---file--6--1.png",
       alt: "Adobe express file",
-      className: "w-[70px] h-[31px]",
     },
     {
       src: "https://c.animaapp.com/mf9h3e3wUYtRXO/img/new-paypal-logo-white-png-horizontal-large-size-1-3.png",
       alt: "New paypal logo",
-      className: "w-[93px] h-[25px] object-cover",
     },
     {
       src: "https://c.animaapp.com/mf9h3e3wUYtRXO/img/xpay-preto-1.png",
       alt: "Xpay preto",
-      className: "w-[70px] h-7 object-cover bg-white",
     },
   ];
 
@@ -52,7 +45,6 @@ export const BlueDuckV = () => {
       className="bg-black flex flex-col items-center w-screen min-h-screen overflow-x-hidden"
       data-model-id="3816:7750"
     >
-
       <div className="bg-black overflow-hidden w-full max-w-[1440px] flex flex-col">
         <section className="w-full translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
           <AboutUsSection />
@@ -64,15 +56,20 @@ export const BlueDuckV = () => {
           </div>
         </section>
 
+        {/* ✅ Logos Section (responsive & images fit screen) */}
         <section className="w-full flex justify-center py-8 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] mb-24">
-          <div className="flex items-center gap-[69px] opacity-80">
+          <div className="flex flex-wrap items-center justify-center gap-12 opacity-80 px-6">
             {logoData.map((logo, index) => (
-              <img
+              <div
                 key={`logo-${index}`}
-                className={`${logo.className}`}
-                alt={logo.alt}
-                src={logo.src}
-              />
+                className="flex items-center justify-center max-h-[46px]"
+              >
+                <img
+                  className="max-h-[46px] w-auto object-contain"
+                  alt={logo.alt}
+                  src={logo.src}
+                />
+              </div>
             ))}
           </div>
         </section>

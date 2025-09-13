@@ -189,7 +189,7 @@ export const ServicesSection = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className= "flex justify-start p-0 m-0">
+      {/* <div className= "flex justify-start p-0 m-0">
         
         <div className="w-full max-w-4xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] mt ">
           <div className="text-center mb-20">
@@ -225,11 +225,43 @@ export const ServicesSection = () => {
         <div>
 
         </div>
+      </div> */}
+
+      {/* FAQ Section */}
+      <div className="flex-1 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+        <div className="text-center mb-20">
+          <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
+            FREQUENTLY ASKED QUESTIONS
+          </h2>
+        </div>
+
+        <Accordion type="single" collapsible className="w-full space-y-8">
+          {faqItems.map((item, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border-none"
+            >
+              <div className="relative">
+                <AccordionTrigger className="flex justify-between items-center w-full py-0 hover:no-underline [&[data-state=open]>svg]:rotate-180">
+                  <div className="text-left pl-[17px] [-webkit-text-stroke:1px_#00000038] font-light text-white text-2xl tracking-[0.50px] leading-7 mb-3">
+                    {item.question}
+                  </div>
+                  <ChevronDownIcon className="h-5 w-5 text-white transition-transform duration-200 mr-[38px]" />
+                </AccordionTrigger>
+                <div className="absolute w-full h-px bg-[url(https://c.animaapp.com/mf9h3e3wUYtRXO/img/line-11.svg)] bg-repeat-x bottom-0" />
+              </div>
+              <AccordionContent className="pt-4 pb-0">
+                <div className="pl-[17px] text-white">{item.answer}</div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
 
 
       {/* Blog Section */}
-      <div className="w-full max-w-7xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+      {/* <div className="w-full max-w-7xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
         <div className="text-center mb-16 ">
           <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
             BLOGS
@@ -257,6 +289,44 @@ export const ServicesSection = () => {
                     {post.category}
                   </div>
 
+                  <h3 className="font-normal text-white text-base tracking-[0] leading-[26px]">
+                    {post.title}
+                  </h3>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div> */}
+
+      <div className="w-full max-w-7xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms] mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
+            BLOGS
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {blogPosts.map((post, index) => (
+            <Card
+              key={post.id}
+              className="bg-transparent border-none translate-y-[-1rem] animate-fade-in opacity-0"
+              style={{ "--animation-delay": `${800 + index * 100}ms` }}
+            >
+              <CardContent className="p-0">
+                {/* Responsive image wrapper */}
+                <div className="w-full aspect-[16/9] mb-4 rounded-lg overflow-hidden bg-black flex items-center justify-center">
+                  <img
+                    className="w-full h-full object-contain"
+                    alt="Blog post"
+                    src={post.image}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <div className="font-normal text-[#ffffffab] text-base tracking-[0] leading-[20.8px]">
+                    {post.category}
+                  </div>
                   <h3 className="font-normal text-white text-base tracking-[0] leading-[26px]">
                     {post.title}
                   </h3>
