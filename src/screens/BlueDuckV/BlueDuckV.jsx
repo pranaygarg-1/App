@@ -1,13 +1,13 @@
 import React from "react";
 import { Navbar } from "../../components/ui/Navbar";
-import { AboutUsSection } from "./sections/Hero/HeroSection";
-import { CallToActionSection } from "./sections/CallToActionSection/CallToActionSection";
-import { ContactSection } from "./sections/About/About";
-import { HeroSection } from "./sections/HeroSection/HeroSection";
-import { NavigationSection } from "./sections/Services/Services";
-import { PortfolioSection } from "./sections/PortfolioSection/PortfolioSection";
-import { ServicesSection } from "./sections/ServicesSection/ServicesSection";
-import { TestimonialsSection } from "./sections/TestimonialsSection/TestimonialsSection";
+import { AboutUsSection } from "./sections/Section1/HeroSection";
+import { CallToActionSection } from "./sections/Section7/CallToActionSection";
+import { ContactSection } from "./sections/Section2/About";
+import { HeroSection } from "./sections/Section4/ChooseUs";
+import { NavigationSection } from "./sections/Section3/Services";
+import { PortfolioSection } from "./sections/Section5/PortfolioSection";
+import { ServicesSection } from "./sections/Section6/ServicesSection";
+import { TestimonialsSection } from "./sections/Section8/Footer";
 
 export const BlueDuckV = () => {
   const logoData = [
