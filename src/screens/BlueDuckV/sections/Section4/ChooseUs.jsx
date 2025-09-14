@@ -34,15 +34,15 @@ export const HeroSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-16 md:py-20">
+    <section className="w-full h-auto bg-white">
       <div className="max-w-[1274px] mx-auto px-4 relative">
         {/* Vertical dividers (behind heading & cards, desktop only) */}
         <div className="absolute top-0 left-0 w-full h-full hidden sm:block pointer-events-none z-0">
           <div className="flex h-full w-full">
-            {Array.from({ length: featureCards.length - 1 }).map((_, i) => (
+            {Array.from({ length: featureCards.length }).map((_, i) => (
               <div key={i} className="flex-1 relative">
                 <div className="absolute inset-0 flex justify-center">
-                  <div className="w-px h-full bg-black/20" />
+                  <div className="w-1 h-full bg-black/100" />
                 </div>
               </div>
             ))}
@@ -50,16 +50,16 @@ export const HeroSection = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="relative z-10 text-center mb-12 sm:mb-16 font-normal text-black text-xl md:text-2xl">
+        <h2 className="relative z-10 text-center pt-20 mb-12 sm:mb-4 font-normal text-black text-lg md:text-lg tracking-wider">
           WHY CHOOSE BLUE DUCK
         </h2>
 
         {/* Cards */}
-        <div className="relative flex flex-col sm:flex-row items-stretch justify-between gap-8 z-10">
+        <div className="relative flex flex-col sm:flex-row items-stretch justify-between gap-8 z-10 pb-32">
           {featureCards.map((card, index) => (
             <Card
               key={index}
-              className="flex-1 max-w-full sm:max-w-[300px] h-[280px] bg-[#040404] border border-[#ffffff1a] hover:scale-105 transition-transform duration-300 rounded-[18px] shadow-lg flex flex-col"
+              className="flex-1 max-w-full sm:max-w-[300px] h-[280px] bg-[#040404] border border-[#ffffff1a] hover:scale-105 transition-transform duration-300 shadow-lg flex flex-col"
             >
               <CardContent className="relative h-full flex flex-col items-center justify-center p-6 text-center">
                 <img

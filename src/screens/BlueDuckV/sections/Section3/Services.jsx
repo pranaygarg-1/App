@@ -91,8 +91,9 @@ export const NavigationSection = () => {
             WHAT WE DO
           </h2>
         </div>
-
-        <div className="space-y-[100px] sm:space-y-[120px]">
+        
+        {/* // ...inside return, after the section heading */}
+        <div className="space-y-[100px] sm:space-y-[120px] h-[70vh] overflow-y-auto hide-scrollbar">
           <ServiceBlock
             title="Marketing Services"
             bgImg="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151.png"
@@ -108,6 +109,56 @@ export const NavigationSection = () => {
             services={consultingServices}
             delay={1200}
           />
+
+          <ServiceBlock
+            title="Marketing Services"
+            bgImg="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151.png"
+            img="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1129.png"
+            services={marketingServices}
+            delay={400}
+          />
+
+          <ServiceBlock
+            title="Consulting Services"
+            bgImg="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151-1.png"
+            img="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1129-1.png"
+            services={consultingServices}
+            delay={1200}
+          />
+
+          <ServiceBlock
+            title="Marketing Services"
+            bgImg="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151.png"
+            img="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1129.png"
+            services={marketingServices}
+            delay={400}
+          />
+
+          <ServiceBlock
+            title="Consulting Services"
+            bgImg="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151-1.png"
+            img="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1129-1.png"
+            services={consultingServices}
+            delay={1200}
+          />
+
+          <ServiceBlock
+            title="Marketing Services"
+            bgImg="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151.png"
+            img="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1129.png"
+            services={marketingServices}
+            delay={400}
+          />
+
+          <ServiceBlock
+            title="Consulting Services"
+            bgImg="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1151-1.png"
+            img="https://c.animaapp.com/mf9h3e3wUYtRXO/img/rectangle-1129-1.png"
+            services={consultingServices}
+            delay={1200}
+          />
+
+          {/* (Repeated blocks you added for testing) */}
         </div>
       </div>
     </section>

@@ -62,18 +62,27 @@ export const ContactSection = () => {
         {/* Blue highlight text */}
         <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
           <div className="flex justify-center mb-10 sm:mb-[76px] px-2">
-            <div className="relative w-full max-w-[718px]">
-              {/* Highlight background */}
-              <div className="absolute top-[2px] left-1/2 -translate-x-1/2 sm:left-[248px] sm:translate-x-0 w-[200px] sm:w-[308px] h-[28px] sm:h-[31px] bg-[#1929f2] rounded" />
-
-              {/* Text layer */}
-              <div
-                style={{ wordSpacing: "0.1em" }}
-                className="relative font-light text-white text-sm sm:text-lg md:text-2xl text-center sm:text-right leading-[20px] sm:leading-[28px] md:leading-[31.2px]"
-              >
-                At Blue Duck, we blend{" "}
-                <span className="relative z-10">Storytelling, Strategy, and AI</span>{" "}
-                to help brands:
+            <div className="flex justify-center sm:justify-end">
+              <div className="relative w-full max-w-[718px]">
+                <p
+                  className="relative font-light text-white text-sm sm:text-lg md:text-2xl text-center sm:text-right
+                     leading-[20px] sm:leading-[28px] md:leading-[31.2px] m-0"
+                >
+                  At Blue Duck, we blend{" "}
+                  <span className="relative inline-block align-middle">
+                    {/* Blue highlight background that always matches text width & height */}
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-0 rounded-md -z-10
+                         bg-[#1929f2] opacity-100"
+                    />
+                    {/* Text with adaptive padding so highlight has breathing room */}
+                    <span className="relative px-2 sm:px-3 md:px-4 py-[2px]">
+                      Storytelling, Strategy, and AI
+                    </span>
+                  </span>{" "}
+                  to help brands:
+                </p>
               </div>
             </div>
           </div>
