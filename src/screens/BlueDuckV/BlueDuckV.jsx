@@ -1,12 +1,13 @@
 import React from "react";
-import { AboutUsSection } from "./sections/AboutUsSection/AboutUsSection";
-import { CallToActionSection } from "./sections/CallToActionSection/CallToActionSection";
-import { ContactSection } from "./sections/ContactSection/ContactSection";
-import { HeroSection } from "./sections/HeroSection/HeroSection";
-import { NavigationSection } from "./sections/NavigationSection/NavigationSection";
-import { PortfolioSection } from "./sections/PortfolioSection/PortfolioSection";
-import { ServicesSection } from "./sections/ServicesSection/ServicesSection";
-import { TestimonialsSection } from "./sections/TestimonialsSection/TestimonialsSection";
+import { Navbar } from "../../components/ui/Navbar";
+import { AboutUsSection } from "./sections/Section1/HeroSection";
+import { CallToActionSection } from "./sections/Section7/CallToActionSection";
+import { ContactSection } from "./sections/Section2/About";
+import { HeroSection } from "./sections/Section4/ChooseUs";
+import { NavigationSection } from "./sections/Section3/Services";
+import { PortfolioSection } from "./sections/Section5/PortfolioSection";
+import { ServicesSection } from "./sections/Section6/ServicesSection";
+import { TestimonialsSection } from "./sections/Section8/Footer";
 
 export const BlueDuckV = () => {
   const logoData = [
@@ -45,6 +46,9 @@ export const BlueDuckV = () => {
       className="bg-black flex flex-col items-center w-screen min-h-screen overflow-x-hidden"
       data-model-id="3816:7750"
     >
+      {/* ✅ Navbar on top */}
+      <Navbar />
+
       <div className="bg-black overflow-hidden w-full max-w-[1440px] flex flex-col">
         <section className="w-full translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
           <AboutUsSection />
