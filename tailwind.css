@@ -209,6 +209,8 @@ body {
   width: 100%;        /* instead of 100vw */
   max-width: 100%;    /* never exceed */
   overflow-x: hidden; /* block horizontal scroll */
+  height: auto;
+  overflow-y: scroll;
 }
 
 .hide-scrollbar {

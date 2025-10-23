@@ -1,4 +1,3 @@
-import { ChevronDownIcon } from "lucide-react";
 import React from "react";
 import {
   Accordion,
@@ -51,48 +50,104 @@ export const ServicesSection = () => {
   ];
 
   const faqItems = [
+    // General
     {
-      question:
-        "What makes Blue Duck different from other agencies or consultants?",
-      answer: "",
+      question: "What is Blue Duck?",
+      answer:
+        "Blue Duck is a consulting-led growth partner that blends consulting, storytelling, AI, and analytics to drive real business growth—not just marketing campaigns.",
     },
     {
-      question: "Who is Blue Duck best suited for?",
-      answer: "",
+      question: "How is Blue Duck different from a traditional agency?",
+      answer:
+        "We go beyond ads and content. From sales enablement to investor readiness, we work as your extended growth team—consulting, executing, and closing deals.",
     },
     {
-      question: "What is your AI-Powered Brand Engine?",
-      answer: "",
+      question: "Who do you work with?",
+      answer:
+        "Startups, scale-ups, and enterprises across industries like tech, healthcare, AI, telecom, and consumer brands.",
+    },
+    // Services
+    {
+      question: "What services do you offer?",
+      answerList: [
+        "Sales & Business Development",
+        "Brand Building & Positioning",
+        "AI-Powered Digital Marketing",
+        "Content Creation & Campaigns",
+        "Go-to-Market (GTM) Strategy",
+        "Investor Pitch & Fundraising Support",
+      ],
     },
     {
-      question:
-        "Do I need to have an existing brand or marketing strategy to work with you?",
-      answer: "",
+      question: "Can you help with fundraising?",
+      answer:
+        "Yes. We create investor-ready pitch decks, market sizing (TAM/SAM/SOM), and storytelling strategies that help secure funding.",
     },
     {
-      question: "How do your marketing services drive ROI?",
-      answer: "",
+      question: "Do you provide both B2B and B2C solutions?",
+      answer:
+        "Absolutely—whether it’s enterprise partnerships or mass customer acquisition, we build tailored strategies for both.",
     },
     {
-      question:
-        "Can I hire you for just one service (like pitch decks or GTM strategy)?",
-      answer: "",
+      question: "Do you only advise or also execute?",
+      answer:
+        "Both. We design the strategy and execute it—campaigns, events, lead generation, and deal closures.",
     },
     {
-      question: "How does AI play a role in your offerings?",
-      answer: "",
+      question: "Do you provide event and launch support?",
+      answer:
+        "Yes. From trade shows to digital product launches, we manage end-to-end events, PR, and partner activations.",
+    },
+    // Engagement
+    {
+      question: "What engagement models do you offer?",
+      answerList: [
+        "Retainer (monthly ongoing support)",
+        "Project-based (for rebranding, launches, pitch decks)",
+        "Hybrid (retainer + flexible add-ons)",
+      ],
     },
     {
-      question: "What industries do you specialize in?",
-      answer: "",
+      question: "Do you work with international clients?",
+      answer:
+        "Yes, we’ve helped companies expand across Australia, UAE, Europe, and Asia.",
     },
     {
-      question: "What's your typical engagement model or timeline?",
-      answer: "",
+      question: "Can you create custom growth strategies for niche industries?",
+      answer:
+        "Definitely. We start with your Ideal Customer Profile (ICP) and build growth plans specific to your market.",
     },
+    // Process & Results
+    {
+      question: "How do you measure success?",
+      answer:
+        "Through clear KPIs like customer acquisition, revenue pipeline growth, lead conversion rates, and funding milestones.",
+    },
+    {
+      question: "Can you show examples of past work?",
+      answer:
+        "Yes. We’ve helped clients secure multi-million-dollar funding, close strategic partnerships, and launch in new markets. (Add a Case Studies or Work section on site).",
+    },
+    {
+      question: "How fast can I see results?",
+      answer:
+        "It depends on the scope—some campaigns deliver leads within weeks, while GTM and fundraising strategies can take 2–3 months to show impact.",
+    },
+    // Getting Started
     {
       question: "How do I get started with Blue Duck?",
-      answer: "",
+      answer:
+        "Fill out our contact form or schedule a call. We’ll understand your needs, suggest a plan, and kickstart growth.",
+    },
+    {
+      question: "Do you offer a free consultation?",
+      answer:
+        "Yes, we start with a discovery session to understand your goals and challenges.",
+    },
+    {
+      question: "What makes Blue Duck the right growth partner for me?",
+      answer:
+        "If you’re looking for more than a marketing agency—someone who defines positioning, executes campaigns, and helps close deals—we’re the partner for you.",
     },
   ];
 
@@ -134,7 +189,7 @@ export const ServicesSection = () => {
         </div>
 
         <div className="flex gap-7 overflow-x-auto scrollbar-hide pb-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial) => (
             <Card
               key={testimonial.id}
               className="min-w-[403px] h-60 bg-transparent border-none"
@@ -228,37 +283,47 @@ export const ServicesSection = () => {
       </div> */}
 
       {/* FAQ Section */}
-      <div className="flex-1 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-        <div className="text-center mb-20">
+      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] w-[972px] h-[794px] flex flex-col items-center overflow-hidden">
+        <div className="mb-10 pt-2">
           <h2 className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-[#787878] text-xl tracking-[0] leading-[normal]">
             FREQUENTLY ASKED QUESTIONS
           </h2>
         </div>
-
-        <Accordion type="single" collapsible className="w-full space-y-8">
-          {faqItems.map((item, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="border-none"
-            >
-              <div className="relative">
-                <AccordionTrigger className="flex justify-between items-center w-full py-0 hover:no-underline [&[data-state=open]>svg]:rotate-180">
-                  <div className="text-left pl-[17px] [-webkit-text-stroke:1px_#00000038] font-light text-white text-2xl tracking-[0.50px] leading-7 mb-3">
-                    {item.question}
+        {/* Scrollable accordion area fixed inside container */}
+        <div className="w-full flex-1 px-2 overflow-y-auto scrollbar-hide pr-2">
+          <Accordion type="single" collapsible className="space-y-8">
+            {faqItems.map((item, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border-none"
+              >
+                <div className="relative">
+                  <AccordionTrigger className="flex justify-between items-start w-full py-0 hover:no-underline [&[data-state=open]>svg]:rotate-180 [&>svg]:text-white [&>svg]:h-5 [&>svg]:w-5">
+                    <div className="text-left pl-[4px] [-webkit-text-stroke:1px_#00000038] font-light text-white text-xl tracking-[0.50px] leading-7 mb-3">
+                      {item.question}
+                    </div>
+                  </AccordionTrigger>
+                  <div className="absolute w-full h-px bg-[url(https://c.animaapp.com/mf9h3e3wUYtRXO/img/line-11.svg)] bg-repeat-x bottom-0" />
+                </div>
+                <AccordionContent className="pt-2 pb-0">
+                  <div className="pl-[4px] text-white whitespace-pre-line text-sm leading-relaxed">
+                    {item.answerList ? (
+                      <ul className="list-disc pl-5 space-y-1">
+                        {item.answerList.map((line, i) => (
+                          <li key={i}>{line}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      item.answer
+                    )}
                   </div>
-                  {/* <ChevronDownIcon className="h-5 w-5 text-white transition-transform duration-200 mr-[38px]" /> */}
-                </AccordionTrigger>
-                <div className="absolute w-full h-px bg-[url(https://c.animaapp.com/mf9h3e3wUYtRXO/img/line-11.svg)] bg-repeat-x bottom-0" />
-              </div>
-              <AccordionContent className="pt-4 pb-0">
-                <div className="pl-[17px] text-white">{item.answer}</div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
-
 
       {/* Blog Section */}
       {/* <div className="w-full max-w-7xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
